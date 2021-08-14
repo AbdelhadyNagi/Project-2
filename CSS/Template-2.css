@@ -195,6 +195,13 @@ body {
     }
 }
 
+@media (max-width: 1000px) {
+    .head .header .logo {
+        margin-left: 15px;
+        transition: .2s;
+    }
+}
+
 .head .header .logo img {
     width: 115px;
     height: 40px;
@@ -470,7 +477,7 @@ body {
     order: 2;
 }
 
-@media mopile, (max-width: 767px) {
+@media mopile, (max-width: 1000px) {
     .services .container .serv-cols {
         display: flex;
         flex-flow: row wrap;
