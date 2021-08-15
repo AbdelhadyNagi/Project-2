@@ -189,7 +189,7 @@ body {
 
 @media (max-width: 767px) {
     .head .header .logo {
-        width: 80%;
+        width: 60%;
         margin-top: 10px;
         order: 0;
     }
@@ -238,8 +238,8 @@ body {
 .head .header .links ul li a {
     text-decoration: none;
     color: white;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 12px;
+    padding-left: 12px;
     padding-top: 30px;
     padding-bottom: 30px;
     display: flex;
@@ -251,8 +251,8 @@ body {
 
 @media (max-width: 767px) {
     .head .header .links ul li a{
-        padding-left: 8.5px;
-        padding-right: 8.5px;
+        padding-left: 4.5px;
+        padding-right: 4.5px;
         padding-top: 10px;
         padding-bottom: 20px;
         font-size: 12px ;
@@ -416,7 +416,7 @@ body {
 }
 /* End Head Section */
 
-/* Start Services */
+/* Start Services 01*/
 .services .container .serv-cols {
     display: grid;
     grid-template-columns: repeat(2, minmax(300px, 1fr));
@@ -500,4 +500,180 @@ body {
         text-align: center;
     }
 }
-/* End Services */
+/* End Services 01*/
+
+/* Start Services 02 */
+.services-2 {
+    background-image: url(/Images/design-features.jpg);
+    background-size: cover;
+    height: 80vh;
+    position: relative;
+    z-index: -1;
+}
+
+.services-2::after {
+    content: '';
+    background-color: rgb(0 0 0 / 63%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.services-2 .servs {
+    padding: 0 300px 40px 0;
+    margin: 0;
+    list-style: none;
+    max-width: 700px;
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #0f748fb0;
+    z-index: 2;
+}
+
+@media Mopile, (max-width: 767px) {
+    .services-2 .servs {
+        width: 100%;
+        padding-right: 0; 
+    }
+}
+
+.services-2 .servs p {
+    font-size: 30px;
+    padding: 40px 0 0 70px;
+}
+
+
+@media Mopile, (max-width: 767px) {
+    .services-2 .servs p {
+        padding-left: 10px;
+        font-size: 25px; 
+    }
+}
+
+.services-2 .servs li {
+    font-size: 18px;
+    padding: 0 0 20px 110px;
+}
+
+@media Mopile, (max-width: 767px) {
+    .services-2 .servs li {
+        padding-left: 30px;
+        font-size: 16px; 
+    }
+}
+
+.services-2 .servs li i {
+    padding-right: 30px;
+}
+
+
+@media Mopile, (max-width: 767px) {
+    .services-2 .servs li i {
+        padding-right: 10px;
+        font-size: 16px; 
+    }
+}
+
+
+.services-2 .image {
+    width: 338px;
+    height: 362px;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    overflow: hidden;
+}
+
+@media Mopile, (max-width: 1000px) {
+    .services-2 .image {
+        display: none;
+    }
+}
+/* End Services 02 */
+
+/* Start Portfolio */
+.portfolio .container .contents {
+    width: 100%;
+    margin: -30px auto 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.portfolio .container .contents div {
+    color: black;
+    padding: 15px;
+    align-items: center;
+    transition: .1s;
+}
+
+.portfolio .container .contents div:hover {
+    color: white;
+    background-color: var(--main-color--);
+}
+
+.portfolio .projects {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 3px 0;
+}
+
+.portfolio .projects .prj {
+    position: relative;
+}
+
+.portfolio .projects .prj img {
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.portfolio .projects .prj .text {
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    bottom: -90px;
+    left: 0;
+    transition: .3s;
+    z-index: 0;
+    display: none;
+}
+
+.portfolio .projects .prj .text h3 {
+    color: black;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 15px;
+    margin: 0;
+}
+
+.portfolio .projects .prj .text p {
+    color: var(--main-color--);
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+.portfolio .projects .prj img:hover {
+    transform: rotate(3deg) scale(1.05);
+}
+
+
+.portfolio .projects .prj img:hover + .text {
+    transform: translateY(-90px);
+    display: block;
+}
+/* End Portfolio */
