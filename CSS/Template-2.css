@@ -685,6 +685,7 @@ body {
     font-size: 25px;
     font-weight: 600;
     transition: .15s;
+    margin-bottom: 100px;
 }
 
 .portfolio .more:hover {
@@ -724,5 +725,11 @@ body {
     outline: none;
     padding: 10px;
     border: none;
+}
+
+@media Mopile, (max-width: 767px) {
+    .portfolio .video .text {
+        background-color: transparent;
+    }
 }
 /* End Portfolio */
