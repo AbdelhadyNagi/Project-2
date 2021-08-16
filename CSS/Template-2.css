@@ -504,7 +504,7 @@ body {
 
 /* Start Services 02 */
 .services-2 {
-    background-image: url(/Images/design-features.jpg);
+    background-image: url(Images/design-features.jpg);
     background-size: cover;
     height: 80vh;
     position: relative;
