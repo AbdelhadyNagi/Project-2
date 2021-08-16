@@ -733,3 +733,340 @@ body {
     }
 }
 /* End Portfolio */
+
+/* Start About Section */
+.about .container {
+    height: 80vh;
+}
+
+@media mopile, (max-width: 767px) {
+    .about .container {
+        height: 45vh;
+    }
+}
+
+.about .container .image {
+    width: 60%;
+    height: 40%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.about .container .image img {
+    width: 100%;
+    height: 165%;
+}
+
+@media mopile, (max-width: 767px) {
+    .about .container .image {
+        display: none;
+    }
+}
+
+.about .statistics {
+    background-image: url(../Images/stats.png);
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 70vh;
+}
+
+
+
+.about .statistics::before {
+    content: '';
+    background-color: rgb(0 0 0 / 63%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.about .statistics .stats {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0f748fb0;
+    width: 80%;
+    padding: 30px;
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.about .statistics .stats .stat {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 20px;
+}
+
+.about .statistics .stats .stat i {
+    background-color: black;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .statistics .stats .stat h3 {
+    font-size: 50px;
+    font-weight: 600;
+    margin: 30px 0 0;
+}
+
+.about .statistics .stats .stat p {
+    margin-bottom: 0;
+}
+
+.about .test-skills {
+    width: 80%;
+    height: 100vh;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    justify-content: center;
+    gap: 85px;
+}
+
+@media mopile, (max-width: 767px) {
+    .about .test-skills {
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+        grid-template-rows: repeat(2, minmax(500px, 1fr));
+        margin: 185px auto;
+        gap: 0;
+    }
+}
+
+.about .test-skills .test {
+    height: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
+.about .test-skills .txt {
+    padding-left: 60px;
+    text-align: center;
+}
+
+@media mopile, (max-width: 767px) {
+    .about .test-skills .txt {
+        padding-left: 5px;
+    }
+}
+
+.about .test-skills .txt h3 {
+    line-height: 1.85;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.about .test-skills .txt p {
+    line-height: 1.80;
+    font-size: 15px;
+    color: #6f6f6f;
+}
+
+.about .test-skills .test .ceo {
+    display: grid;
+    grid-template-columns: 20% 70%;
+    justify-content: space-evenly;
+}
+
+.about .test-skills .test .ceo img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.about .test-skills .test .ceo p {
+    text-align: left;
+    margin-left: 20px;
+    line-height: 1.8;
+    position: relative;
+}
+
+.about .test-skills .test .ceo p::before {
+    content: "John Doe, CEO";
+    font-size: 14px;
+    color: #6f6f6f;
+    position: absolute;
+    bottom: -25%;
+    right: -5%;
+}
+
+.about .test-skills .test .ceo p::after {
+    content: "";
+    background-color: rgb(190 187 187 / 92%);
+    width: 105%;
+    height: 1px;
+    position: absolute;
+    bottom: -25%;
+    right: -5%;
+}
+
+@media mopile, (max-width: 767px) {
+    .about .test-skills .test .ceo p {
+        line-height: 1.2;
+    }
+
+    .about .test-skills .test .ceo p::before {
+        bottom: -15%;
+    }
+    .about .test-skills .test .ceo p::after {
+        bottom: -15%;
+    }
+}
+
+.about .test-skills .test .nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.about .test-skills .test .nav div {
+    background-color: transparent;
+    margin: 5px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgb(190 187 187 / 92%);
+    border-radius: 50%;
+}
+
+.about .test-skills .test .nav div:nth-child(2) {
+    background-color: var(--main-color--);
+    border: none;
+}
+
+.about .test-skills .skills {
+    height: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
+.about .test-skills .skills .skill {
+    font-size: 16px;
+    line-height: 1.8;
+    padding-left: 60px;
+}
+
+.about .test-skills .skills .skill .per-90 {
+    background-image: linear-gradient(to right, #00c7fc 90% , #dedadc 90% , #dedadc );
+    width: 100%;
+    height: 25px;
+    position: relative;
+}
+
+.about .test-skills .skills .skill .per-90::before {
+    content: '90\0025';
+    padding-left: 4px;
+    padding-right: 4px;
+    line-height: 1.8;
+    color: #fff;
+    background-color: black;
+    position: absolute;
+    top: -150%;
+    right: 10%;
+    transform: translateX(50%);
+    border-radius: 5px;
+}
+
+.about .test-skills .skills .skill .per-90::after {
+    content: '';
+    background-color: transparent;
+    border-top: 10px solid black;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: -50%;
+    right: 10%;
+    transform: translateX(50%);
+}
+
+.about .test-skills .skills .skill .per-85 {
+    background-image: linear-gradient(to right, #00c7fc 85% , #dedadc 85% , #dedadc );
+    width: 100%;
+    height: 25px;
+    position: relative;
+}
+
+
+.about .test-skills .skills .skill .per-85::before {
+    content: '85\0025';
+    padding-left: 4px;
+    padding-right: 4px;
+    line-height: 1.8;
+    color: #fff;
+    background-color: black;
+    position: absolute;
+    top: -150%;
+    right: 15%;
+    transform: translateX(50%);
+    border-radius: 5px;
+}
+
+.about .test-skills .skills .skill .per-85::after {
+    content: '';
+    background-color: transparent;
+    border-top: 10px solid black;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: -50%;
+    right: 15%;
+    transform: translateX(50%);
+}
+
+.about .test-skills .skills .skill .per-80 {
+    background-image: linear-gradient(to right, #00c7fc 80% , #dedadc 80% , #dedadc );
+    width: 100%;
+    height: 25px;
+    position: relative;
+}
+
+
+.about .test-skills .skills .skill .per-80::before {
+    content: '80\0025';
+    padding-left: 4px;
+    padding-right: 4px;
+    line-height: 1.8;
+    color: #fff;
+    background-color: black;
+    position: absolute;
+    top: -150%;
+    right: 20%;
+    transform: translateX(50%);
+    border-radius: 5px;
+}
+
+.about .test-skills .skills .skill .per-80::after {
+    content: '';
+    background-color: transparent;
+    border-top: 10px solid black;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: -50%;
+    right: 20%;
+    transform: translateX(50%);
+}
+
+
+@media mopile, (max-width: 767px) {
+    .about .test-skills .skills .skill {
+        padding-left: 0;
+    }
+}
+
+/* End About Section */
