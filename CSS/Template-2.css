@@ -741,7 +741,7 @@ body {
 
 @media mopile, (max-width: 767px) {
     .about .container {
-        height: 45vh;
+        height: 25vh;
     }
 }
 
@@ -781,6 +781,16 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+@media mopile, (max-width: 767px) {
+    .about .statistics {
+        height: 120vh;
+    }
+
+    .about .statistics::before {
+        height: 120vh;
+    }
 }
 
 .about .statistics .stats {
@@ -840,13 +850,13 @@ body {
     .about .test-skills {
         grid-template-columns: repeat(1, minmax(300px, 1fr));
         grid-template-rows: repeat(2, minmax(500px, 1fr));
-        margin: 185px auto;
-        gap: 0;
+        margin: 100px auto;
+        gap: 50px;
     }
 }
 
 .about .test-skills .test {
-    height: 80%;
+    height: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
@@ -913,6 +923,16 @@ body {
 }
 
 @media mopile, (max-width: 767px) {
+    .about .test-skills .test .ceo {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .about .test-skills .test .ceo img {
+        width: 30%;
+    }
+
     .about .test-skills .test .ceo p {
         line-height: 1.2;
     }
@@ -946,7 +966,7 @@ body {
 }
 
 .about .test-skills .skills {
-    height: 80%;
+    height: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
@@ -1069,4 +1089,42 @@ body {
     }
 }
 
+.about .final {
+    background-image: url(../Images/quote.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 35vh;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+
+.about .final::before {
+    content: '';
+    background-color: rgb(0 0 0 / 63%);
+    width: 100%;
+    height: 35vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.about .final q {
+    font-size: 30px;
+    line-height: 1.8;
+    z-index: 1;
+    position: relative;
+}
+
+.about .final q::before {
+    content: 'John Doe';
+    font-size: 20px;
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+}
 /* End About Section */
