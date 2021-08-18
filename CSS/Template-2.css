@@ -201,7 +201,9 @@ body {
     }
 }
 
-.head .header .logo img {
+.head .header .logo a {
+    background-image: url(../Images/logo.jpg);
+    background-size: cover;
     width: 115px;
     height: 40px;
 }
