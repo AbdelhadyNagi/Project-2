@@ -120,7 +120,6 @@ body {
 /* End Special Component */
 
 /* Start Head Section */
-
 .head {
     height: 100vh;
     position: relative;
@@ -1245,15 +1244,31 @@ body {
     color: #fff;
 }
 
-.pricing .email {
+.pricing form {
+    margin: 0 auto;
+    color: white;
     width: 100%;
     background-image: url(../Images/subscribe.jpg);
     background-size: cover;
+    padding: 120px;
     position: relative;
-    z-index: -1;
+    z-index: -2;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
-.pricing .email:before {
+@media Mopile, (max-width: 767px) {
+    .pricing form {
+        display: flex;
+        flex-flow: column;
+        padding: 0;
+    }
+}
+
+.pricing form:before {
     content: '';
     background-color: rgb(0 0 0 / 63%);
     width: 100%;
@@ -1261,12 +1276,238 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: -1;
 }
 
-.pricing .email input {
-    z-index: 1;
-    width: 20%;
-    height: 40px;
+.pricing form .email {
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid white;
 }
-/* End Pricing Section */
+
+@media Mopile, (max-width: 767px) {
+    .pricing form .email {
+        width: 90%;
+        margin-top: 40px;
+    }
+}
+
+.pricing form .email i {
+    width: 8%;
+    font-size: 25px;
+    color: white;
+    margin-left: 15px;
+}
+
+.pricing form .email input {
+    width: 65%;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+@media Mopile, (max-width: 767px) {
+    .pricing form .email input {
+        width: 50%;
+    }
+}
+
+.pricing form .email a {
+    width: 25%;
+    border: none;
+    padding: 20px;
+    color: white;
+    background-color: #19c8fa;
+    text-decoration: none;
+    text-align: center;
+}
+
+@media Mopile, (max-width: 767px) {
+    .pricing form .email a {
+        width: 30%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.pricing form p {
+    text-align: left;
+}
+
+@media Mopile, (max-width: 767px) {
+    .pricing form p {
+        width: 90%;
+        text-align: center;
+    }
+}
+ /* End Pricing Section */
+
+ /* Start Contact Section */
+.contact-us .cnt {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media Mopile, (max-width: 767px) {
+    .contact-us .cnt {
+        flex-flow: column;
+    }
+}
+
+.contact-us .cnt .cnt-1 {
+    width: 70%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    position: relative;
+}
+
+.contact-us .cnt-1 input, .contact-us .cnt-1 textarea {
+    width: 100%;
+    height: 60px;
+    padding: 30px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border: 1px solid #e7e7e7;
+    outline: 0;
+}
+
+.contact-us .cnt-1 textarea {
+    height: 280px;
+}
+
+.contact-us .cnt .cnt-2 {
+    width: 25%;
+    height: 464px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+@media Mopile, (max-width: 767px) {
+    .contact-us .cnt .cnt-2 {
+        height: auto;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.contact-us .cnt .cnt-2 .txt-1 {
+    height: 30%;
+}
+
+.contact-us .cnt .cnt-2 .txt-1 p:first-child {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.contact-us .cnt .cnt-2 .txt-1 p:not(:first-child) {
+    color: #848383;
+}
+
+.contact-us .cnt .cnt-2 .txt-2 {
+    height: 68%;
+}
+
+.contact-us .cnt .cnt-2 .txt-2 p:first-child {
+    font-size: 18px;
+}
+
+.contact-us .cnt .cnt-2 .txt-2 p:not(:first-child) {
+    color: #848383;
+}
+
+.contact-us .container a {
+    text-decoration: none;
+    background-color: #03a9f4;
+    width: fit-content;
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+    display: block;
+    margin: 0 0 20px 10px;
+}
+
+@media Mopile, (max-width: 767px) {
+    .contact-us .container a {
+        margin: 10px auto;
+    }
+}
+
+.contact-us .cnt-final {
+    background-image: url(../Images/subscribe.jpg);
+    background-size: cover;
+    width: 100%;
+    z-index: -2;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.contact-us .cnt-final:before {
+    content: '';
+    background-color: rgb(0 0 0 / 63%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.contact-us .cnt-final img {
+    padding: 30px;
+    width: 12%;
+}
+
+.contact-us .cnt-final p:nth-child(2) {
+    width: fit-content;
+    font-size: 24px;
+    line-height: 1.85;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    border-bottom: 1px solid white;
+}
+
+.contact-us .cnt-final .media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-us .cnt-final .media i {
+    margin-left: 35px;
+    margin-top: 30px;
+    font-size: 16px;
+    color: white;
+}
+
+.contact-us .cnt-final .media i:first-child {
+    margin-left: 0;
+}
+
+.contact-us .cnt-final p:last-child {
+    padding: 20px;
+    margin-top: 50px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+.contact-us .cnt-final p:last-child span {
+    color: var(--main-color--);
+    font-weight: bold;
+}
+ /* End Contact Section */
